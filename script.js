@@ -18,7 +18,7 @@ $(document).ready(function() {
     let textarea = $("<textarea>");
     let buttonDiv = $("<div>");
     let saveBtn = $("<button>");
-    timeRow.addClass("row");
+    timeRow.addClass("row no-gutters");
 
     timeAreaDiv.addClass("hour col-1");
     timeAreaDiv.text(timeValues[i]);
