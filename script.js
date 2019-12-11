@@ -13,16 +13,25 @@ $(document).ready(function() {
   ];
   for (let i = 0; i < timeValues.length; i++) {
     let timeRow = $("<div>");
-    let timeArea = $("<div>");
-    let textBoxArea = $("<textarea>");
+    let timeAreaDiv = $("<div>");
+    let textBoxDiv = $("<div>");
+    let textarea = $("<textarea>");
+    let buttonDiv = $("<div>");
     let saveBtn = $("<button>");
-    timeArea.addClass("hour");
-    timeArea.text(timeValues[i]);
     timeRow.addClass("row");
+
+    timeAreaDiv.addClass("hour col-1");
+    timeAreaDiv.text(timeValues[i]);
+
+    textBoxDiv.addClass("col-10");
+
+    buttonDiv.addClass("col-1");
     saveBtn.addClass("saveBtn");
     saveBtn.text("Save");
 
     containerDiv.append(timeRow);
-    timeRow.append(timeArea, textBoxArea, saveBtn);
+    timeRow.append(timeAreaDiv, textBoxDiv, buttonDiv);
+    textBoxDiv.append(textarea);
+    buttonDiv.append(saveBtn);
   }
 });
