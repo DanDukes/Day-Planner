@@ -1,15 +1,15 @@
 $(document).ready(function() {
   let containerDiv = $("#container");
   let timeValues = [
-    "9am",
-    "10am",
-    "11am",
-    "12pm",
-    "1pm",
-    "2pm",
-    "3pm",
-    "4pm",
-    "5pm"
+    "9AM",
+    "10AM",
+    "11AM",
+    "12PM",
+    "1PM",
+    "2PM",
+    "3PM",
+    "4PM",
+    "5PM"
   ];
   for (let i = 0; i < timeValues.length; i++) {
     let timeRow = $("<div>");
@@ -20,10 +20,10 @@ $(document).ready(function() {
     let saveBtn = $("<button>");
     timeRow.addClass("row no-gutters");
 
-    timeAreaDiv.addClass("hour col-1");
-    timeAreaDiv.text(timeValues[i]);
+    timeAreaDiv.addClass("hour col-2 d-flex align-items-center");
+    timeAreaDiv.html(`<p>${timeValues[i]}</p>`);
 
-    textBoxDiv.addClass("col-10");
+    textBoxDiv.addClass("col-9 past");
 
     buttonDiv.addClass("col-1");
     saveBtn.addClass("saveBtn");
