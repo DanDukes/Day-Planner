@@ -1,15 +1,15 @@
 $(document).ready(function() {
   var containerDiv = $("#container");
   var timeValues = [
-    { time: 9, status: "AM" },
-    { time: 10, status: "AM" },
-    { time: 11, status: "AM" },
-    { time: 12, status: "PM" },
-    { time: 1, status: "PM" },
-    { time: 2, status: "PM" },
-    { time: 3, status: "PM" },
-    { time: 4, status: "PM" },
-    { time: 5, status: "PM" }
+    { time: 9, status: "AM", mil: 09 },
+    { time: 10, status: "AM", mil: 10 },
+    { time: 11, status: "AM", mil: 11 },
+    { time: 12, status: "PM", mil: 12 },
+    { time: 1, status: "PM", mil: 13 },
+    { time: 2, status: "PM", mil: 14 },
+    { time: 3, status: "PM", mil: 15 },
+    { time: 4, status: "PM", mil: 16 },
+    { time: 5, status: "PM", mil: 17 }
   ];
   //
   //Code to get and display the day in the head
@@ -17,7 +17,8 @@ $(document).ready(function() {
   var currentTime = moment().format("MMMM Do YYYY");
   $("#currentDay").text(currentTime);
 
-  var currentHour = moment().format("h");
+  var currentHour = parseInt(moment().format("H"));
+  //var currentHour = 12;
   console.log(currentHour);
 
   //
@@ -35,8 +36,8 @@ $(document).ready(function() {
     timeRow.addClass("row no-gutters");
     timeAreaDiv.addClass("hour col-2 d-flex align-items-center");
     timeAreaDiv.html(`<p>${timeValues[i].time} ${timeValues[i].status}</p>`);
-    textBoxDiv.addClass("col-9 future");
-    textBoxDiv.attr("value", timeValues[i].time);
+    textBoxDiv.addClass("col-9");
+    textBoxDiv.attr("value", timeValues[i].mil);
     buttonDiv.addClass("col-1");
     saveBtn.addClass("saveBtn");
     saveBtn.text("Save");
@@ -50,12 +51,13 @@ $(document).ready(function() {
   var colorDiv = $(".col-9");
   console.log(colorDiv);
   for (let j = 0; j < colorDiv.length; j++) {
-    if (colorDiv[j].val() > currentHour) {
-      colorDiv[j].addClass("future");
-    } else if (colorDiv[j].val() < currentHour) {
-      colorDiv[j].addClass("past");
+    var currentDiv = $(colorDiv[j]);
+    if (currentDiv.attr("value") > currentHour) {
+      currentDiv.addClass("future");
+    } else if (currentDiv.attr("value") < currentHour) {
+      currentDiv.addClass("past");
     } else {
-      colorDiv[j].addClass("present");
+      currentDiv.addClass("present");
     }
   }
 });
