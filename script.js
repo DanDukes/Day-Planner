@@ -41,7 +41,7 @@ $(document).ready(function() {
     textBoxDiv.attr("value", timeValues[i].mil);
     buttonDiv.addClass("col-1");
     saveBtn.addClass("saveBtn");
-    saveBtn.text("Save");
+    saveBtn.html("<i class='fas fa-save fa-2x'></i>");
     //appending the rows to the container, and then appending the column divs to the row
     containerDiv.append(timeRow);
     timeRow.append(timeAreaDiv, textBoxDiv, buttonDiv);
