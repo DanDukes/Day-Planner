@@ -72,5 +72,7 @@ $(document).ready(function() {
   //Function to Save whats in the textarea in a row to local memory
   //and display said text as the contents of the textarea
   //
-  function saveText() {}
+  function saveText() {
+    var textArea = $("div > textarea");
+  }
 });
