@@ -47,6 +47,10 @@ $(document).ready(function() {
     timeRow.append(timeAreaDiv, textBoxDiv, buttonDiv);
     textBoxDiv.append(textarea);
     buttonDiv.append(saveBtn);
+    //check to see if there is a localstorage item for the textarea, and if there is, set its value as the text in the textarea
+    if (localStorage.getItem(timeValues[i].mil)) {
+      textarea.text(localStorage.getItem(timeValues[i].mil));
+    }
   }
   //
   //Logic to set the background of the rows based on their relation to the current time
@@ -87,6 +91,6 @@ $(document).ready(function() {
     console.log(val);
     console.log(key);
 
-    localStorage.setItem(key, JSON.stringify(val));
+    localStorage.setItem(key, val);
   }
 });
