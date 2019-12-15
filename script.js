@@ -95,8 +95,7 @@ $(document).ready(function() {
     //console.log(key);
 
     localStorage.setItem(key, val);
-
-    //Logic to update the classes periodically to make sure they change color class with the time if the page remains open
-    setInterval(setClass, 60000);
   }
+  //Logic to update the classes periodically to make sure they change color class with the time if the page remains open
+  setInterval(setClass, 60000);
 });
