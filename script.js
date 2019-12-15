@@ -88,8 +88,8 @@ $(document).ready(function() {
       .parent()
       .find(".col-9")
       .attr("value");
-    console.log(val);
-    console.log(key);
+    //console.log(val);
+    //console.log(key);
 
     localStorage.setItem(key, val);
   }
