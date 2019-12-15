@@ -55,17 +55,20 @@ $(document).ready(function() {
   //
   //Logic to set the background of the rows based on their relation to the current time
   //
-  var colorDiv = $(".col-9");
-  for (let j = 0; j < colorDiv.length; j++) {
-    var currentDiv = $(colorDiv[j]);
-    if (currentDiv.attr("value") > currentHour) {
-      currentDiv.addClass("future");
-    } else if (currentDiv.attr("value") < currentHour) {
-      currentDiv.addClass("past");
-    } else {
-      currentDiv.addClass("present");
+  function setClass() {
+    var colorDiv = $(".col-9");
+    for (let j = 0; j < colorDiv.length; j++) {
+      var currentDiv = $(colorDiv[j]);
+      if (currentDiv.attr("value") > currentHour) {
+        currentDiv.addClass("future");
+      } else if (currentDiv.attr("value") < currentHour) {
+        currentDiv.addClass("past");
+      } else {
+        currentDiv.addClass("present");
+      }
     }
   }
+  setClass();
   //
   //Add event listener on row.button to run the saveText function
   //
@@ -92,5 +95,8 @@ $(document).ready(function() {
     //console.log(key);
 
     localStorage.setItem(key, val);
+
+    //Logic to update the classes periodically to make sure they change color class with the time if the page remains open
+    setInterval(setClass, 60000);
   }
 });
