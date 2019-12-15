@@ -73,6 +73,20 @@ $(document).ready(function() {
   //and display said text as the contents of the textarea
   //
   function saveText() {
-    var textArea = $("div > textarea");
+    var val = $(this)
+      .parent()
+      .parent()
+      .find("textarea")
+      .val();
+
+    var key = $(this)
+      .parent()
+      .parent()
+      .find(".col-9")
+      .attr("value");
+    console.log(val);
+    console.log(key);
+
+    localStorage.setItem(key, JSON.stringify(val));
   }
 });
