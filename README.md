@@ -6,14 +6,12 @@ The purpose of this application is to provide a method to plan out tasks hour by
 
 ### Gallery
 
-Home:
-![Image title](./relativeLinkToImage.png "Image title")
+Base Application:
+![Image title](./baseApp.png "Image title")
 
-Sign In:
-![Home Page View](./relativeLinkToImage.png "Home Page View")
+Text Saved:
+![Home Page View](./textSave.png "Home Page View")
 
-Super Cool Page:
-![Home Page View](./relativeLinkToImage.png "Home Page View")
 
 ### Problem
 
