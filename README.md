@@ -7,10 +7,10 @@ The purpose of this application is to provide a method to plan out tasks hour by
 ### Gallery
 
 Base Application:
-![Image title](./baseApp.png "Image title")
+![Home Page](./baseApp.png "Home Page")
 
 Text Saved:
-![Home Page View](./textSave.png "Home Page View")
+![Text is Saved](./textSave.png "Text is Saved")
 
 
 ### Problem
