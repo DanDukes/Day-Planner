@@ -10,10 +10,10 @@ https://dandukes.github.io/homework_5/
 ### Gallery
 
 Base Application:
-![Home Page](./baseApp.png "Home Page")
+![Home Page](/images/baseApp.png "Home Page")
 
 Text Saved:
-![Text is Saved](./textSave.png "Text is Saved")
+![Text is Saved](/images/textSave.png "Text is Saved")
 
 
 ### Problem
