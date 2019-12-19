@@ -4,6 +4,9 @@
 
 The purpose of this application is to provide a method to plan out tasks hour by hour during the standard workday.
 
+Hosted Application:
+https://dandukes.github.io/homework_5/
+
 ### Gallery
 
 Base Application:
